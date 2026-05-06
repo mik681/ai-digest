@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-дайджест — свежие новости из мира искусственного интеллекта</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-badge">AI-дайджест</div>
+            <h1 class="hero-title">Свежие новости из мира <span class="gradient-text">искусственного интеллекта</span></h1>
+            <p class="hero-subtitle">Главные релизы, исследования и события AI-индустрии — всё в одном месте</p>
+            <div class="hero-actions">
+                <a href="#news" class="btn btn-primary">Смотреть новости</a>
+                <a href="#benefits" class="btn btn-secondary">Преимущества</a>
+            </div>
+            <div class="hero-badges">
+                {% for badge in badges %}
+                <span class="hero-tag" data-category="{{ badge.slug }}">{{ badge.name }}</span>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <h2 class="section-title">Почему AI-дайджест</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Быстрый обзор</h3>
+                    <p>Получите представление о главных AI-событиях за 5 минут</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Удобные карточки</h3>
+                    <p>Информация структурирована и готова к изучению</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔍</div>
+                    <h3>Фильтрация</h3>
+                    <p>Находите нужные темы быстро и просто</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💡</div>
+                    <h3>Понятный интерфейс</h3>
+                    <p>Разберётся даже новичок в мире AI</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news" id="news">
+        <div class="container">
+            <div class="news-header">
+                <h2 class="section-title">Последние новости</h2>
+            </div>
+            
+            <!-- Search & Filter Bar -->
+            <div class="filter-bar">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Поиск по новостям...">
+                </div>
+                <div class="filter-group">
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="all">Все категории</option>
+                        {% for category in categories %}
+                        <option value="{{ category.slug }}">{{ category.name }}</option>
+                        {% endfor %}
+                    </select>
+                    <select id="sortSelect" class="filter-select">
+                        <option value="date-desc">Сначала свежие</option>
+                        <option value="date-asc">Сначала старые</option>
+                        <option value="importance-desc">По важности</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Tags Filter -->
+            <div class="tags-filter" id="tagsFilter">
+                <button class="tag-btn active" data-tag="all">Все</button>
+                <button class="tag-btn" data-tag="model_release">Модели</button>
+                <button class="tag-btn" data-tag="llm">LLM</button>
+                <button class="tag-btn" data-tag="open-source">Open Source</button>
+                <button class="tag-btn" data-tag="research">Исследования</button>
+                <button class="tag-btn" data-tag="tools">Инструменты</button>
+                <button class="tag-btn" data-tag="business">Бизнес</button>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="cards-grid" id="cardsGrid">
+                {% for card in news %}
+                <article class="news-card" data-id="{{ card.id }}" data-category="{{ card.category }}" data-tags="{{ ' '.join(card.tags) }}" data-title="{{ card.title }}" data-description="{{ card.description }}" data-importance="{{ card.importance }}" data-date="{{ card.date }}">
+                    <div class="card-header">
+                        <span class="card-category">{{ card.source }}</span>
+                        <span class="card-date">{{ card.date }}</span>
+                    </div>
+                    <h3 class="card-title">{{ card.title }}</h3>
+                    <p class="card-description">{{ card.description }}</p>
+                    <div class="card-tags">
+                        {% for tag in card.tags %}
+                        <span class="card-tag">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                    <a href="{{ card.url }}" target="_blank" rel="noopener" class="card-btn">
+                        Открыть материал
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                        </svg>
+                    </a>
+                </article>
+                {% endfor %}
+            </div>
+
+            <!-- No Results -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <p>Ничего не найдено. Попробуйте изменить запрос.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Следи за важными обновлениями мира ИИ в одном месте</h2>
+                <p>AI-дайджест — твой проводник в мире искусственного интеллекта</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 AI-дайджест. Все материалы принадлежат их правообладателям.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

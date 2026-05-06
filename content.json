@@ -1,0 +1,129 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "title": "OpenAI представила GPT-5 с прорывными возможностями рассуждения",
+      "description": "Новая модель GPT-5 демонстрирует значительно улучшенные способности к многошаговому рассуждению и демонстрирует признаки теории разума. Релиз включает обновлённую архитектуру稀疏注意力ных механизмов.",
+      "url": "https://openai.com/blog/gpt-5",
+      "tags": ["gpt-5", "openai", "llm", "релиз", "модели"],
+      "date": "2026-05-06",
+      "category": "model_release",
+      "source": "OpenAI",
+      "importance": 95
+    },
+    {
+      "id": 2,
+      "title": "Anthropic выпустила Claude 4 Opus — самую мощную модель для программирования",
+      "description": "Claude 4 Opus превосходит все существующие модели в задачах написания и рефакторинга кода. Модель демонстрирует снижение ошибок на 40% и улучшенное понимание больших кодовых баз.",
+      "url": "https://www.anthropic.com/claude-4",
+      "tags": ["claude", "anthropic", "код", "программирование", "модели"],
+      "date": "2026-05-05",
+      "category": "model_release",
+      "source": "Anthropic",
+      "importance": 92
+    },
+    {
+      "id": 3,
+      "title": "Google представила Gemini 2.5 Pro с поддержкой контекста на 2 млн токенов",
+      "description": "Новая версия Gemini работает с контекстом до 2 миллионов токенов и показывает рекордные результаты на бенчмарках LongBench. Модель доступна через API Gemini API.",
+      "url": "https://blog.google/gemini-2-5-pro",
+      "tags": ["gemini", "google", "llm", "контекст", "модели"],
+      "date": "2026-05-04",
+      "category": "model_release",
+      "source": "Google DeepMind",
+      "importance": 88
+    },
+    {
+      "id": 4,
+      "title": "xAI запустила Grok 3 с открытым исходным кодом",
+      "description": "Илон Маск объявил о публикации Grok 3 под лицензией Apache 2.0. Модель доступна для скачивания и развёртывания локально. Особенный акцент на математических задачах.",
+      "url": "https://x.ai/blog/grok-3-open-source",
+      "tags": ["grok", "xai", "open-source", "математика", "модели"],
+      "date": "2026-05-03",
+      "category": "model_release",
+      "source": "xAI",
+      "importance": 85
+    },
+    {
+      "id": 5,
+      "title": "Microsoft интегрировала Copilot во все продукты Microsoft 365",
+      "description": "Copilot теперь встроен в Word, Excel, PowerPoint, Outlook и Teams по умолчанию. Новый Copilot Speaker позволяет голосовое управление през��нтациями в реальном времени.",
+      "url": "https://news.microsoft.com/copilot-microsoft-365",
+      "tags": ["microsoft", "copilot", "интеграция", "продукты"],
+      "date": "2026-05-02",
+      "category": "integration",
+      "source": "Microsoft",
+      "importance": 80
+    },
+    {
+      "id": 6,
+      "title": "Meta представила Llama 4 с улучшенной мультимодальностью",
+      "description": "Llama 4 работает с текстом, изображениями, аудио и видео в единой модели. Open-source версия доступна на Hugging Face с коммерческой лицензией.",
+      "url": "https://ai.meta.com/llama-4",
+      "tags": ["llama", "meta", "мультимодальность", "open-source", "модели"],
+      "date": "2026-05-01",
+      "category": "model_release",
+      "source": "Meta AI",
+      "importance": 82
+    },
+    {
+      "id": 7,
+      "title": "Nvidia представила DGX Cloud с интегрированными AI-агентами",
+      "description": "Новая платформа DGX Cloud включает предварительно настроенные AI-агенты для разработки, тестирования и развёртывания моделей. Снижение стоимости владения до 60%.",
+      "url": "https://nvidia.com/dgx-cloud",
+      "tags": ["nvidia", "инфраструктура", "агенты", "облако"],
+      "date": "2026-04-30",
+      "category": "tools",
+      "source": "Nvidia",
+      "importance": 78
+    },
+    {
+      "id": 8,
+      "title": "ИсследователиStanford создали прорывную архитектуру для AI-агентов",
+      "description": "Новая архитектура AgentFlow позволяет агентам планировать действия на несколько шагов вперёд с сохранением контекста. Потенциальное применение в робототехнике и автономных системах.",
+      "url": "https://cs.stanford.edu/agentflow",
+      "tags": ["исследования", "агенты", "архитектура", "стэнфорд"],
+      "date": "2026-04-29",
+      "category": "research",
+      "source": "Stanford AI Lab",
+      "importance": 75
+    },
+    {
+      "id": 9,
+      "title": "Stability AI выпустила Stable Video 3 — генерация видео из текста",
+      "description": "Stable Video 3 создаёт высококачественное видео до 10 секунд из текстового описания. Модель работает наconsumer видеокартах с 8GB VRAM.",
+      "url": "https://stability.ai/stable-video-3",
+      "tags": ["stability-ai", "видео", "генерация", "инструменты"],
+      "date": "2026-04-28",
+      "category": "tools",
+      "source": "Stability AI",
+      "importance": 73
+    },
+    {
+      "id": 10,
+      "title": "Инвестиции в AI-стартапы достигли рекордных $50 млрд в Q1",
+      "description": "Согласно отчёту PitchBook, в первый квартал 2026 года в AI-сектор инвестировано рекордные $50 млрд. Основные направления: AI-агенты, генеративный AI и инфраструктура.",
+      "url": "https://pitchbook.com/ai-investments-q1-2026",
+      "tags": ["инвестиции", "стартапы", "рынок", "финансы"],
+      "date": "2026-04-27",
+      "category": "business",
+      "source": "PitchBook",
+      "importance": 70
+    }
+  ],
+  "badges": [
+    {"name": "Новые модели", "slug": "model_release"},
+    {"name": "Релизы", "slug": "releases"},
+    {"name": "Инструменты", "slug": "tools"},
+    {"name": "Исследования", "slug": "research"}
+  ],
+  "categories": [
+    {"name": "Все новости", "slug": "all"},
+    {"name": "Релизы моделей", "slug": "model_release"},
+    {"name": "Новости компаний", "slug": "company"},
+    {"name": "Исследования", "slug": "research"},
+    {"name": "Инструменты", "slug": "tools"},
+    {"name": "Бизнес", "slug": "business"},
+    {"name": "Интеграции", "slug": "integration"}
+  ]
+}
